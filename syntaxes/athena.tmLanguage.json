@@ -1,0 +1,60 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Athena",
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#operators"
+		},
+		{
+			"include": "#reserved"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"comments": {
+			"patterns": [
+				{
+					"begin": "#",
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.definition.comment.athena"
+						}
+					},
+					"end": "\n",
+					"name": "comment.line.number-sign.athena"
+				}
+			]
+		},
+		"operators": {
+			"patterns": [
+				{
+					"match": ":=|:|->|&|\\||~|=>|==>|<==>|=",
+					"name": "keyword.operator.athena"
+				}
+			]
+		},
+		"reserved": {
+			"patterns": [{
+				"name": "entity.name.function.member.athena",
+				"match": "\\b(module|domain|domains|declare|define|forall|exists|apply-method|conclude|assume|suppose-absurd|pick-any|with-witness|pick-witness|for|by-induction|datatype|datatypes|datatype-cases|structure|check|match|let|letrec|try|assert|lambda|method)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.athena",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.athena",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.ath"
+}

@@ -1,0 +1,25 @@
+{
+  "name": "athena-lang",
+  "displayName": "athena-lang",
+  "description": "Extension for the Athena language",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "athena",
+      "aliases": ["Athena", "athena"],
+      "extensions": [".ath"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "athena",
+      "scopeName": "source.ath",
+      "path": "./syntaxes/athena.tmLanguage.json"
+    }]
+  }
+}
