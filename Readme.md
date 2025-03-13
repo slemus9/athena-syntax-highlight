@@ -4,7 +4,19 @@ A very simple Syntax Highlighting support in vscode for [Athena](http://www.proo
 An LSP support would also be great. But for now, this will help you to see some colors.
 
 ## How to install it locally
-- Clone this repository into your vscode extensions folder. Usually located at: `$HOME/.vscode/extensions`. Restart your vscode.
-- Open your file with vscode. It must have the `.ath` file extension in order for it to work.
 
-I will try to gradually improve this and maybe develop a full language extension :D
+1. Download the `.vsix` file from a the latest Release in this repository
+2. Install the extension from the packaged `.vsix` file:
+
+    1. Using the command line:
+
+      ```console
+      code --install-extension athena-lang-x.y.z.vsix
+      ```
+
+    2. Using the VSCode UI:
+
+        1. Go to **Extensions**
+        2. Select **Views and More Actions...**
+        3. Select **Install from VSIX...**
+        4. Select the `.vsix` file that you downloaded
